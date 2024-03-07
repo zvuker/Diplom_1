@@ -54,8 +54,8 @@ public class BunTest {
         String veryLongName = String.join("", Collections.nCopies(1000, "X"));
         float expectedPrice = 500.0f;
         Bun bun = new Bun(veryLongName, expectedPrice);
-        Assert.assertEquals("The name should match the very long name provided", veryLongName, bun.getName());
-        Assert.assertEquals("The price should match the expected price", expectedPrice, bun.getPrice(), 0.01);
+        Assert.assertEquals("The name must correspond to the given very long name", veryLongName, bun.getName());
+        Assert.assertEquals("The price must align with the anticipated price", expectedPrice, bun.getPrice(), 0.01);
     }
 
 }

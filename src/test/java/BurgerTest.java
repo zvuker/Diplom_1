@@ -56,14 +56,6 @@ public class BurgerTest {
     }
 
     @Test
-    public void removeIngredientTest() {
-        Burger burger = new Burger();
-        burger.addIngredient(ingredientMock);
-        burger.removeIngredient(0);
-        Assert.assertFalse(burger.ingredients.contains(ingredientMock));
-    }
-
-    @Test
     public void getReceiptTest() {
         Burger burger = new Burger();
         burger.setBuns(bunMock);
@@ -83,5 +75,13 @@ public class BurgerTest {
         burger.addIngredient(ingredientSauce);
         burger.addIngredient(ingredientFilling);
         Assert.assertEquals(6208, burger.getPrice(), 0.01);
+    }
+
+    @Test
+    public void removeIngredientTest() {
+        Burger burger = new Burger();
+        burger.addIngredient(ingredientMock);
+        burger.removeIngredient(0);
+        Assert.assertFalse(burger.ingredients.contains(ingredientMock));
     }
 }
